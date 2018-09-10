@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/sitelayout">
 <head>
-<title th:text="#{app.name}">"My Puzzles 1</title>
+<title th:text="#{app.name}">All Puzzles 1</title>
 <!--<link rel="stylesheet" th:href="@{/webjars/bootstrap/3.1.1/css/bootstrap.min.css}" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />-->
 <!--<link rel="stylesheet" th:href="@{/webjars/bootstrap/3.1.1/css/bootstrap-theme.css}" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.css" />-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -12,7 +12,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<h1 class="well well-small">My Puzzles</h1>
+				<h1 class="well well-small">Select a puzzle to solve.</h1>
 			</div>
 		</div>
 		<div layout:fragment="content">
@@ -28,9 +28,9 @@
 							<h2>
 								User: ${username}
 							</h2>
-							<a href="/puzzlme">
-								New Puzzles
-							</a>
+						<a href="/puzzles">
+							My Puzzles
+						</a>
 						</tbody>
 					</table>
 				</div>
