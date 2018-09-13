@@ -1,0 +1,5 @@
+package share
+
+class ApiResponse {
+
+}
