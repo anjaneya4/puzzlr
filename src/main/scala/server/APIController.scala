@@ -38,4 +38,17 @@ class APIController @Autowired()(){
     Json.stringify(jsonObject)
   }
 
+  @GetMapping(path = Array("/solvedpuzzle"))
+  def solvedpuzzle(): String = {
+    val jsonObject = Json.parse(
+      """
+        [
+          [1, 2, 0],
+          [4, 5, 3],
+          [7, 8, 6]
+        ]
+      """)
+    Json.stringify(jsonObject)
+  }
+
 }
