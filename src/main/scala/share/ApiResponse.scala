@@ -1,5 +1,0 @@
-package share
-
-class ApiResponse {
-
-}

@@ -3,11 +3,12 @@ package server
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation._
 import play.api.libs.json.Json
+import services.PuzzleService
 
 @RestController
 @CrossOrigin
 @RequestMapping(path = Array("/api"))
-class APIController @Autowired()(){
+class APIController(@Autowired private val puzzleService: PuzzleService){
 
   @GetMapping(path = Array("/apitest"))
   def test(): String = {
@@ -35,6 +36,12 @@ class APIController @Autowired()(){
           [7, 0, 5]
         ]
       """)
+    Json.stringify(jsonObject)
+  }
+
+  @GetMapping(path = Array("/newpuzzle/{size}/{level}"))
+  def newpuzzle(@PathVariable size: Int, @PathVariable level: Int): String = {
+    val jsonObject = Json.parse(puzzleService.getNewPuzzle(size, level))
     Json.stringify(jsonObject)
   }
 
